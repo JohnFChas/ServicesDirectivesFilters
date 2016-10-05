@@ -23,6 +23,12 @@
             <td class="col-md-1" ng-bind="post.author"></td>
             <td class="col-md-1" ng-bind="post.postDate"></td>
             <td class="col-md-1">
+                <button type="button"
+                        class="btn btn-info"
+                        ng-click="go('/Posts/Edit/' + post.id)">
+                    <span class="glyphicon glyphicon-edit"></span> Edit
+                </button>
+
                 <button type="button" 
                         class="btn btn-danger"
                         ng-click="deletePost(post)">

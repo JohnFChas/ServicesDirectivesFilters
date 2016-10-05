@@ -21,6 +21,13 @@ angular.module("mainModule")
                     controller: "NewPostController",
                     caseInsensitiveMatch: true,
                     activeTab: "Home"
+                })
+
+                .when("/Posts/Edit/:id", {
+                    templateUrl: "Views/Posts/EditPost.html",
+                    controller: "EditPostController",
+                    caseInsensitiveMatch: true,
+                    activeTab: "Home"
                 });
         }
     ]);
