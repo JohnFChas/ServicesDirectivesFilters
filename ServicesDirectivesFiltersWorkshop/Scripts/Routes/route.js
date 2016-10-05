@@ -14,6 +14,13 @@ angular.module("mainModule")
                     controller: "HomeController",
                     caseInsensitiveMatch: true,
                     activeTab: "Home"
+                })
+
+                .when("/Posts/New", {
+                    templateUrl: "Views/Posts/New.html",
+                    controller: "NewPostController",
+                    caseInsensitiveMatch: true,
+                    activeTab: "Home"
                 });
         }
     ]);

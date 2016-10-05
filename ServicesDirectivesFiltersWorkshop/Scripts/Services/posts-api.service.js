@@ -3,7 +3,7 @@
         "$http",
         "$q",
         function ($http, $q) {
-            var api = "http://dummyapi.kodalagom.se";
+            var api = "http://dummyapi.kodalagom.se/api";
             var posts = api + "/posts";
 
             this.getPosts = function () {
