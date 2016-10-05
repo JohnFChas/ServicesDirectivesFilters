@@ -17,7 +17,7 @@ angular.module("mainModule")
                 })
 
                 .when("/Posts/New", {
-                    templateUrl: "Views/Posts/New.html",
+                    templateUrl: "Views/Posts/NewPost.html",
                     controller: "NewPostController",
                     caseInsensitiveMatch: true,
                     activeTab: "Home"
