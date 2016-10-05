@@ -1,0 +1,49 @@
+﻿	┌───────────────────────┐
+	│ Labbupgift: CMS/Blogg │
+	└───────────────────────┘
+Du ska bygga ett såkallat CMS (Content Management System) och en blogg.
+Bloggen ska använda posts i DummyApi-tjänsten som datakälla.
+Allt ska byggas med Angular och Bootstrap.
+
+Fokusera på de vanliga uppgifterna och gör så många extrauppgifter som du hinner med.
+
+API: http://dummyapi.kodalagom.se/api/posts
+API DOCS: https://github.com/JohnFChas/DummyApi/wiki
+
+	┌───────────┐
+	│ Uppgifter │
+	└───────────┘
+- Skapa en service som hanterar alla http-requests
+- Blogg
+	- "Home"-sida med en posts-feed
+	- Visa varje posts title, author, postDate och body
+	- Använd angulars inbyggda filter för att söka efter author eller title
+	- Prenumerera på authors och spara prenumerationer i localstorage
+- CMS
+	- Tabell med alla posts
+		- Visa title, author och postDate
+		- Gå till "Edit" för varje post
+		- "Delete"-knapp
+	- "Create"-sida för att skapa nya posts
+	- "Edit"-sida för att redigera gamla posts
+		- Uppdatera posts på servern med PUT-request (se api docs)
+
+	┌────────────────┐
+	│ Extrauppgifter │
+	└────────────────┘	
+- Blogg
+	- Upvote och downvote knappar på varje post som gör en PUT-request mot servern (se api docs)
+		- Visa antal upvotes och downvotes för varje post
+		- Skapa ett directive med restriction E för att implementera upvote/downvote som ett element
+	- Använd filter eller directive för att skriva ut snyggare datum
+	- Skapa ett eget filter för att söka efter både author och title med ett sökfält
+	- Skapa directive för subscribe-knappen som byter state (ändrar färg till exempel) beroende på om man har prenumererat
+- CMS
+	- Sortera tabellen med posts på title, author eller postDate
+
+	┌───────────┐
+	│ Inlämning │
+	└───────────┘
+- Skapa ett GIT repository, till exempel på github.com.
+- Pusha upp ert projekt till ert repository.
+- Maila länken till repositoryt till mig på john.fristedt@chas.se.
