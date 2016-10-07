@@ -12,11 +12,9 @@ angular.module("mainModule")
 
             postsApi.getPosts()
                 .then(function (data) {
-                    console.log(data);
-
-                    if (data != null)
-                        $scope.posts = data;
+                    $scope.posts = data;
                 });
+
 
             $scope.go = function (url) {
                 $location.path(url);
