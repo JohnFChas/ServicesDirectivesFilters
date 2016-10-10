@@ -1,0 +1,14 @@
+﻿<link href="Scripts/Components/PostVote/post-vote.style.css" rel="stylesheet" />
+
+<div class="post-vote-wrapper">
+    <button type="button"
+            class="btn btn-default"
+            ng-click="scope.vote(true)">
+        <span class="glyphicon glyphicon-thumbs-up"></span> {{scope.post.upvotes}}
+    </button>
+    <button type="button"
+            class="btn btn-default"
+            ng-click="scope.vote(false)">
+        <span class="glyphicon glyphicon-thumbs-down"></span> {{scope.post.downvotes}}
+    </button>
+</div>

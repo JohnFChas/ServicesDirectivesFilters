@@ -1,0 +1,22 @@
+﻿<div class="col-md-12" ng-init="search = ''">
+    <h1 ng-bind="title"></h1>
+</div>
+
+<div class="col-md-3">
+    <div class="form-group">
+        <label for="search">Search</label>
+        <input type="text" id="search" class="form-control" ng-model="search" placeholder="Search..." />
+    </div>
+</div>
+
+<div class="col-md-12" ng-repeat="post in models.posts | filter: search track by $index">
+    <h3 ng-bind="post.title"></h3>
+    <h6>
+        <span ng-bind="post.author"></span>&nbsp;
+        <span ng-bind="post.postDate | formatDate"></span>
+    </h6>
+    <p ng-bind="post.body"></p>
+    <subscribe-button ng-model="post.subscribed"
+                      ng-click="subscribe(post.author)"></subscribe-button>
+    <post-vote post="post"></post-vote>
+</div>

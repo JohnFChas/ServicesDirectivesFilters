@@ -1,0 +1,33 @@
+﻿<div class="col-md-3">
+    <form ng-submit="addPost()">
+        <fieldset>
+            <legend ng-bind="title"></legend>
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" 
+                       id="title"
+                       class="form-control"
+                       ng-model="newPost.title"
+                       placeholder="Title..." />
+            </div>
+            <div class="form-group">
+                <label for="author">Author</label>
+                <input type="text"
+                       id="author"
+                       class="form-control"
+                       ng-model="newPost.author"
+                       placeholder="Author..." />
+            </div>
+            <div class="form-group">
+                <label for="body">Body</label>
+                <textarea id="body"
+                          class="form-control"
+                          ng-model="newPost.body"
+                          placeholder="Body..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">
+                Add post
+            </button>
+        </fieldset>
+    </form>
+</div>
